@@ -273,8 +273,15 @@ visitors_with_nations %>%
 _Calculate the percentage change in visitor admissions from 2021 to 2022. Of the tourist attractions in Scotland, sort into increasing numerical order the types of admission charges based on the mean percentage change in visitor numbers._
 
 ```{r Ex_n}
-# Write your code here
-
+visitors_with_nations%>%
+  group_by(nation)%>%
+  filter(nation == "Scotland") %>%
+    summarise(
+      mean(n_2021, na.rm = TRUE),
+      mean(n_2022, na.rm = TRUE)) %>%
+mean(n_2021, na.rm = TRUE) = "mean2021"
+   mutate(167338.3 - 80861.17) %>%
+  mutate(86477.13 / 167338.3 * 100)
 
 
 ```
